@@ -1,0 +1,12 @@
+{
+  "name": "Priya",
+  "roll_number": "2428cseaiml148",
+  "section": "AIML-B",
+  "branch": "CSE-AIML",
+  "github_username": "Priya342-gif",
+  "dockerhub_username": "priya342",
+  "frontend_image": "priya342/taskflow-frontend:latest",
+  "backend_image": "priya342/taskflow-backend:latest",
+  "application_url": "http://localhost:8080",
+  "backend_health_url": "http://localhost:3000/health"
+}

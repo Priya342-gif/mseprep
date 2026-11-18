@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>MSE-2 Docker & DevOps Practical Submission</title>
+<style>
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.5;
+    color: #24292e;
+    margin: 30px 40px;
+    background: #fff;
+  }
+  h1 {
+    font-size: 22px;
+    border-bottom: 2px solid #0366d6;
+    padding-bottom: 8px;
+    margin-bottom: 20px;
+    color: #0366d6;
+  }
+  h2 {
+    font-size: 16px;
+    border-bottom: 1px solid #eaecef;
+    padding-bottom: 6px;
+    margin-top: 24px;
+    margin-bottom: 12px;
+    color: #24292e;
+  }
+  h3 {
+    font-size: 14px;
+    margin-top: 16px;
+    margin-bottom: 8px;
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 12px 0;
+    font-size: 13px;
+  }
+  th, td {
+    padding: 8px 12px;
+    border: 1px solid #dfe2e5;
+    text-align: left;
+  }
+  th {
+    background-color: #f6f8fa;
+    font-weight: 600;
+  }
+  code {
+    background-color: #f6f8fa;
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace;
+    font-size: 12px;
+  }
+  .box {
+    border: 1px solid #e1e4e8;
+    border-radius: 6px;
+    padding: 12px 16px;
+    background: #fafbfc;
+    margin-bottom: 15px;
+    font-size: 13px;
+  }
+  .screenshot-box {
+    border: 2px dashed #0366d6;
+    border-radius: 6px;
+    padding: 18px;
+    text-align: center;
+    background: #f1f8ff;
+    color: #0366d6;
+    font-weight: 500;
+    margin: 12px 0 18px 0;
+    font-size: 12px;
+  }
+  .checklist {
+    list-style: none;
+    padding-left: 0;
+    font-size: 13px;
+  }
+  .checklist li {
+    padding: 4px 0;
+  }
+  .checklist li::before {
+    content: "✓ ";
+    color: #28a745;
+    font-weight: bold;
+  }
+  .declaration {
+    border-left: 4px solid #28a745;
+    padding: 12px 16px;
+    background-color: #f6ffed;
+    font-style: italic;
+    font-size: 13px;
+    margin-top: 20px;
+  }
+</style>
+</head>
+<body>
+
+<h1>MSE-2 Morning Shift: Software Engineering and DevOps (AI310B)</h1>
+<p><strong>Practical Exam Submission: Docker Containerization, Multi-Container Orchestration & Automated CI/CD</strong></p>
+
+<h2>1. Student Information</h2>
+<table>
+  <tr><th style="width: 35%;">Field</th><th>Details</th></tr>
+  <tr><td><strong>Full Name</strong></td><td>Priya</td></tr>
+  <tr><td><strong>University Roll Number</strong></td><td>2428cseaiml148</td></tr>
+  <tr><td><strong>Section</strong></td><td>AIML-B</td></tr>
+  <tr><td><strong>Branch</strong></td><td>CSE-AIML</td></tr>
+  <tr><td><strong>GitHub Username</strong></td><td>Priya342-gif</td></tr>
+</table>
+
+<h2>2. GitHub Submission Details</h2>
+<table>
+  <tr><th style="width: 35%;">Field</th><th>Details</th></tr>
+  <tr><td><strong>GitHub Repository URL (Fork)</strong></td><td><code>https://github.com/Priya342-gif/mseprep</code></td></tr>
+  <tr><td><strong>Implementation Branch</strong></td><td><code>main</code></td></tr>
+  <tr><td><strong>Application URL</strong></td><td><code>http://localhost:8080</code></td></tr>
+  <tr><td><strong>Backend Health URL</strong></td><td><code>http://localhost:3000/health</code></td></tr>
+</table>
+
+<h2>3. Docker Hub Details</h2>
+<table>
+  <tr><th style="width: 35%;">Component</th><th>Repository & Tag</th><th>Image Registry URL</th></tr>
+  <tr><td><strong>Docker Hub Username</strong></td><td colspan="2"><code>priya342</code></td></tr>
+  <tr><td><strong>Frontend Docker Image</strong></td><td><code>priya342/taskflow-frontend:latest</code></td><td><code>https://hub.docker.com/r/priya342/taskflow-frontend</code></td></tr>
+  <tr><td><strong>Backend Docker Image</strong></td><td><code>priya342/taskflow-backend:latest</code></td><td><code>https://hub.docker.com/r/priya342/taskflow-backend</code></td></tr>
+</table>
+
+<h2>4. Implementation Checklist</h2>
+<ul class="checklist">
+  <li>Frontend Dockerfile implemented (multi-stage build with Vite & Nginx 1.27)</li>
+  <li>Backend Dockerfile implemented (Node 20 Alpine, non-root user, proper health endpoint)</li>
+  <li>docker-compose.yml implemented (orchestrating Postgres 16, Redis 7, Backend, Frontend)</li>
+  <li>docker-compose.deploy.yml implemented (pure image-based deployment without build directives)</li>
+  <li>PostgreSQL persistent storage verified via volume <code>postgres_data</code></li>
+  <li>Redis caching verified with cache population & invalidation</li>
+  <li>Docker Hub images published (<code>priya342/taskflow-backend</code> & <code>priya342/taskflow-frontend</code>)</li>
+  <li>Automated CI/CD integration verified via GitHub Actions</li>
+  <li>Single-command automation script <code>run_all.sh</code> implemented with logging to <code>execution.log</code></li>
+</ul>
+
+<h2>5. CI/CD Execution Evidence & Verification</h2>
+
+<h3>Stage 1: Docker Compose Local Execution (All 4 Services Healthy)</h3>
+<div class="screenshot-box">
+  [Screenshot Evidence 1: Terminal output of <code>docker compose ps</code> showing frontend, backend, postgres, and redis healthy]
+</div>
+
+<h3>Stage 2: Backend Health Verification Endpoint (/health)</h3>
+<div class="screenshot-box">
+  [Screenshot Evidence 2: JSON Response from <code>http://localhost:3000/health</code> showing <code>{"status":"ok","postgres":"ok","redis":"ok"}</code>]
+</div>
+
+<h3>Stage 3: Integration Test Suite Execution</h3>
+<div class="screenshot-box">
+  [Screenshot Evidence 3: Jest / Supertest test results passing all 12 test cases (TC01-TC12)]
+</div>
+
+<h3>Stage 4: Docker Hub Image Publication</h3>
+<div class="screenshot-box">
+  [Screenshot Evidence 4: Docker Hub web console displaying published <code>priya342/taskflow-backend</code> and <code>priya342/taskflow-frontend</code> tags]
+</div>
+
+<h3>Stage 5: Deployment Using Published Images (docker-compose.deploy.yml)</h3>
+<div class="screenshot-box">
+  [Screenshot Evidence 5: Output of <code>docker compose -f docker-compose.deploy.yml up -d</code> pulling and running deployed containers]
+</div>
+
+<h3>Stage 6: GitHub Actions Workflow Execution (CD Pipeline)</h3>
+<div class="screenshot-box">
+  [Screenshot Evidence 6: GitHub Actions workflow run passing all stages: Checkout, Buildx, Login, Backend & Frontend Build/Publish, Pull, Deploy, Health Check]
+</div>
+
+<h2>6. Declaration</h2>
+<div class="declaration">
+  "I hereby declare that the submitted Docker implementation is my own work. I have successfully executed and verified the required CI/CD pipeline stages, published the Docker images to my Docker Hub account, and tested the application deployment."
+</div>
+
+<p style="margin-top: 30px; text-align: right; font-size: 12px; color: #586069;">
+  Generated for Academic Examination Submission &bull; Date: November 18, 2026
+</p>
+
+</body>
+</html>
