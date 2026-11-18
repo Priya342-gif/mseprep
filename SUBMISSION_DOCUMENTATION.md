@@ -19,12 +19,12 @@
 ---
 
 ## 3. Docker Hub Details
-- **Docker Hub Username:** `priya342`
-- **Frontend Docker Image URL:** `https://hub.docker.com/r/priya342/taskflow-frontend`
-- **Backend Docker Image URL:** `https://hub.docker.com/r/priya342/taskflow-backend`
+- **Docker Hub Username:** `priya111222333`
+- **Frontend Docker Image URL:** `https://hub.docker.com/r/priya111222333/taskflow-frontend`
+- **Backend Docker Image URL:** `https://hub.docker.com/r/priya111222333/taskflow-backend`
 - **Docker Images Published:**
-  - `priya342/taskflow-frontend:latest`
-  - `priya342/taskflow-backend:latest`
+  - `priya111222333/taskflow-frontend:latest`
+  - `priya111222333/taskflow-backend:latest`
 
 ---
 
@@ -33,8 +33,8 @@
 - [x] Backend Dockerfile implemented (`backend/Dockerfile`)
 - [x] Multi-service Compose implemented (`docker-compose.yml`)
 - [x] Published image deployment Compose implemented (`docker-compose.deploy.yml`)
-- [x] Frontend image published to Docker Hub (`priya342/taskflow-frontend`)
-- [x] Backend image published to Docker Hub (`priya342/taskflow-backend`)
+- [x] Frontend image published to Docker Hub (`priya111222333/taskflow-frontend`)
+- [x] Backend image published to Docker Hub (`priya111222333/taskflow-backend`)
 - [x] PostgreSQL persistence verified (`postgres_data` named volume)
 - [x] Redis caching verified (`tasks:user:<id>` cached in Redis)
 - [x] Application functionality tested (Jest/Supertest TC01-TC12)
@@ -80,9 +80,9 @@ When running `./run_all.sh` using Git Bash, capture the following required scree
 2. **Docker Hub Authentication:**
    - Terminal showing `docker login` success or GitHub Actions login step.
 3. **Backend Image Build & Publishing:**
-   - Output of `docker build` and `docker push priya342/taskflow-backend:latest`.
+   - Output of `docker build` and `docker push priya111222333/taskflow-backend:latest`.
 4. **Frontend Image Build & Publishing:**
-   - Output of `docker build` and `docker push priya342/taskflow-frontend:latest`.
+   - Output of `docker build` and `docker push priya111222333/taskflow-frontend:latest`.
 5. **Docker Compose Image Pull:**
    - Output of `docker compose -f docker-compose.deploy.yml pull`.
 6. **Application Deployment:**

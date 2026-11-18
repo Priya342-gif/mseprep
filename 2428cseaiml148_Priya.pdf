@@ -15,7 +15,7 @@ endobj
 << /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold >>
 endobj
 6 0 obj
-<< /Length 2375 >>
+<< /Length 2393 >>
 stream
 BT
 /F2 16 Tf
@@ -33,7 +33,7 @@ BT
 0 -15 Td
 (Section: AIML-B           Branch: Computer Science & Engineering - AIML) Tj
 0 -15 Td
-(GitHub: Priya342-gif      Docker Hub Username: priya342) Tj
+(GitHub: Priya342-gif      Docker Hub Username: priya111222333) Tj
 0 -26 Td
 /F2 12 Tf
 (2. GitHub Repository Details) Tj
@@ -49,9 +49,9 @@ BT
 (3. Published Docker Hub Images) Tj
 0 -18 Td
 /F1 10 Tf
-(Backend:  priya342/taskflow-backend:latest) Tj
+(Backend:  priya111222333/taskflow-backend:latest) Tj
 0 -15 Td
-(Frontend: priya342/taskflow-frontend:latest) Tj
+(Frontend: priya111222333/taskflow-frontend:latest) Tj
 0 -26 Td
 /F2 12 Tf
 (4. Implementation Deliverables & Verification Checklist) Tj
@@ -104,5 +104,5 @@ xref
 trailer
 << /Size 7 /Root 1 0 R >>
 startxref
-2823
+2841
 %%EOF

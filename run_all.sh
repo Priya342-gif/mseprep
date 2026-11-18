@@ -61,7 +61,7 @@ if [ -f .env ]; then
   export $(grep -v '^#' .env | xargs)
 fi
 
-export DOCKERHUB_USERNAME="${DOCKERHUB_USERNAME:-priya342}"
+export DOCKERHUB_USERNAME="${DOCKERHUB_USERNAME:-priya111222333}"
 
 REQUIRED_FILES=("backend/Dockerfile" "frontend/Dockerfile" "docker-compose.yml" "docker-compose.deploy.yml" "submission.json")
 ALL_FILES_EXIST=0
